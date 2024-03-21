@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <version.camel>4.0.0-RC2</version.camel>
+        <version.camel>4.4.0</version.camel>
         <version.exec-maven-plugin>1.6.0</version.exec-maven-plugin>
         <version.gmaven>1.5</version.gmaven>
         <version.groovy>4.0.13</version.groovy>

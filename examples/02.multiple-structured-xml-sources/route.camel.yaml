@@ -4,18 +4,18 @@
 - from:
     uri: "direct:step1"
     steps:
-      - set-body:
+      - setBody:
           simple: "resource:classpath:source1.xml"
-      - convert-body-to:
+      - convertBodyTo:
           type: "org.w3c.dom.Document"
       - log:
           message: "step1(source):\n${body}"
 - from:
     uri: "direct:step2"
     steps:
-      - set-body:
+      - setBody:
           simple: "resource:classpath:source2.xml"
-      - convert-body-to:
+      - convertBodyTo:
           type: "org.w3c.dom.Document"
       - log:
           message: "step2(source):\n${body}"
@@ -37,7 +37,7 @@
             - to:
                 uri: "direct:step1"
             # Capture body from step1 and save into exchange properties
-            - set-property:
+            - setProperty:
                 name: "datamapper-step1-body"
                 simple: "${body}"
       - step:
@@ -46,7 +46,7 @@
             - to:
                 uri: "direct:step2"
             # Capture body from step1 and save into exchange properties
-            - set-property:
+            - setProperty:
                 name: "datamapper-step2-body"
                 simple: "${body}"
       - step:
